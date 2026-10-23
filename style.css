@@ -1,0 +1,467 @@
+
+/* =========================
+   1. GLOBAL STYLES
+========================= */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    background-color: #fffaf5;
+    color: #3e3028;
+    line-height: 1.7;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Playfair Display', serif;
+    line-height: 1.25;
+}
+
+.tagline {
+    color: #ad7854;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 18px;
+}
+
+/* =========================
+   2. HEADER & NAVIGATION
+========================= */
+
+header {
+    width: 100%;
+    min-height: 78px;
+    padding: 18px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+    background-color: #fffaf5;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid #f0e6dc;
+}
+
+header h2 {
+    color: #80583f;
+    font-size: 25px;
+    white-space: nowrap;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+nav a {
+    font-size: 13px;
+    font-weight: 600;
+    color: #57483d;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #b47b55;
+}
+
+/* =========================
+   3. HOME / HERO SECTION
+========================= */
+
+#home {
+    min-height: 650px;
+    padding: 100px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #ffffff;
+
+    background:
+        linear-gradient(
+            rgba(35, 25, 18, 0.42),
+            rgba(35, 25, 18, 0.48)
+        ),
+        url("https://images.unsplash.com/photo-1445116572660-236099ec97a0?auto=format&fit=crop&w=1800&q=85");
+
+    background-size: cover;
+    background-position: center;
+}
+
+#home p:first-child {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 4px;
+    margin-bottom: 24px;
+}
+
+#home h1 {
+    font-size: clamp(48px, 7vw, 82px);
+    font-weight: 500;
+    line-height: 1.12;
+    margin-bottom: 25px;
+}
+
+#home p:nth-of-type(2) {
+    max-width: 470px;
+    font-size: 15px;
+    color: #f7eee7;
+    margin-bottom: 32px;
+}
+
+.home-button,
+.about-button,
+.contact-button {
+    display: inline-block;
+    padding: 13px 27px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+.home-button {
+    background-color: #fffaf5;
+    color: #674631;
+}
+
+.home-button:hover {
+    background-color: #d9b391;
+    color: #302219;
+    transform: translateY(-3px);
+}
+
+/* =========================
+   4. INTRODUCTION SECTION
+========================= */
+
+#intro {
+    padding: 100px 25px;
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+#intro h2 {
+    font-size: clamp(30px, 4vw, 43px);
+    font-weight: 500;
+    margin-bottom: 22px;
+    color: #654833;
+}
+
+.intro-text {
+    max-width: 590px;
+    margin: 0 auto;
+    font-size: 15px;
+    color: #817165;
+    line-height: 2;
+}
+
+/* =========================
+   5. MENU SECTION
+========================= */
+
+.menu-section {
+    padding: 90px 8%;
+    text-align: center;
+    background-color: #f5ece2;
+}
+
+.menu-section h2 {
+    font-size: clamp(34px, 4vw, 45px);
+    font-weight: 500;
+    color: #654833;
+    margin-bottom: 12px;
+}
+
+.menu-description {
+    font-size: 14px;
+    color: #827265;
+    margin-bottom: 45px;
+}
+
+.menu-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 28px;
+    text-align: left;
+}
+
+.menu-card {
+    min-width: 0;
+    overflow: hidden;
+    background-color: #fffaf5;
+    border: 1px solid #eee1d4;
+    border-radius: 5px;
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.menu-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 30px rgba(76, 49, 30, 0.10);
+}
+
+.menu-card img {
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.menu-card:hover img {
+    transform: scale(1.03);
+}
+
+.menu-card h3 {
+    font-size: 21px;
+    font-weight: 500;
+    color: #5b4030;
+    margin: 20px 20px 6px;
+}
+
+.menu-card p {
+    font-size: 13px;
+    color: #867568;
+    margin: 0 20px 12px;
+}
+
+.menu-card h4 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+    color: #a66e49;
+    margin: 0 20px 22px;
+}
+
+/* =========================
+   6. ABOUT SECTION
+========================= */
+
+.about-section {
+    padding: 100px 10%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 65px;
+}
+
+.about-image {
+    width: 100%;
+    height: 450px;
+    overflow: hidden;
+}
+
+.about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.about-content h2 {
+    font-size: clamp(34px, 4vw, 45px);
+    font-weight: 500;
+    color: #654833;
+    margin-bottom: 24px;
+}
+
+.about-content > p:not(.tagline) {
+    font-size: 14px;
+    color: #817165;
+    line-height: 2;
+    margin-bottom: 28px;
+}
+
+.about-button {
+    border: 1px solid #9c7050;
+    color: #80583f;
+}
+
+.about-button:hover {
+    background-color: #80583f;
+    color: #ffffff;
+}
+
+/* =========================
+   7. CONTACT SECTION
+========================= */
+
+.contact-section {
+    padding: 90px 20px;
+    text-align: center;
+    background-color: #f5ece2;
+}
+
+.contact-section h2 {
+    max-width: 650px;
+    margin: 0 auto 18px;
+    font-size: clamp(32px, 4vw, 44px);
+    font-weight: 500;
+    color: #654833;
+}
+
+.contact-section > p:not(.tagline) {
+    font-size: 14px;
+    color: #817165;
+    margin-bottom: 26px;
+}
+
+.contact-button {
+    background-color: #80583f;
+    color: #ffffff;
+    margin-bottom: 25px;
+}
+
+.contact-button:hover {
+    background-color: #5b3c2a;
+    transform: translateY(-3px);
+}
+
+.contact-section .opening-hours {
+    margin-top: 18px;
+    margin-bottom: 0;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+}
+
+/* =========================
+   8. FOOTER
+========================= */
+
+footer {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #382a22;
+    color: #fffaf5;
+}
+
+footer h3 {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+footer p {
+    font-size: 12px;
+    color: #d8c6b7;
+    margin-top: 7px;
+}
+
+/* =========================
+   9. TABLET & MOBILE
+========================= */
+
+@media (max-width: 768px) {
+    header {
+        padding: 16px 5%;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    header h2 {
+        font-size: 23px;
+    }
+
+    nav {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+
+    #home {
+        min-height: 560px;
+        padding: 80px 22px;
+    }
+
+    #home h1 {
+        font-size: clamp(44px, 10vw, 64px);
+    }
+
+    #home p:nth-of-type(2) {
+        font-size: 14px;
+    }
+
+    #intro {
+        padding: 75px 25px;
+    }
+
+    .menu-section {
+        padding: 70px 7%;
+    }
+
+    .menu-container {
+        grid-template-columns: 1fr;
+        max-width: 430px;
+        gap: 25px;
+    }
+
+    .menu-card img {
+        height: 260px;
+    }
+
+    .about-section {
+        padding: 70px 7%;
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .about-image {
+        height: 350px;
+    }
+
+    .about-content h2 {
+        font-size: 36px;
+    }
+
+    .contact-section {
+        padding: 70px 22px;
+    }
+}
+
+@media (max-width: 380px) {
+    nav {
+        gap: 14px;
+    }
+
+    nav a {
+        font-size: 11px;
+    }
+
+    #home h1 {
+        font-size: 42px;
+    }
+
+    .menu-card img {
+        height: 220px;
+    }
+}
